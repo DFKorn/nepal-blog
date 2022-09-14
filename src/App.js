@@ -1,10 +1,10 @@
-
 import './App.css';
+import Main from './components/main';
 
 function App() {
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
       <div className='content-wrapper'>
         <main>
           <Main/>
