@@ -1,15 +1,25 @@
-import './App.css';
-import Main from './components/main';
+import "./App.css";
+import Header from "./components/header/header";
+import Main from "./components/main/main";
 
 function App() {
+
+
+
+
+
+
   return (
     <>
-      {/* <Header/> */}
-      <div className='content-wrapper'>
+      <header>
+        <Header />
+      </header>
+      <div className="content-wrapper">
         <main>
-          <Main/>
+          <Main />
         </main>
       </div>
+      <OverlayMenu/>
     </>
   );
 }
