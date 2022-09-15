@@ -28,6 +28,8 @@
 
   --radius: 4px;
   --radius-2: 8px;
+
+  --header-height: 64px;
 }
 
 html,
@@ -62,8 +64,13 @@ p {
   margin: 0;
 }
 
+ul{
+  padding: 0;
+}
+
 li {
   list-style: none;
+  padding: 0;
 }
 
 button {

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./header.css";
-import { ReactComponent as Telegram } from "../../resources/telegram-brands.svg";
-import { ReactComponent as Vk } from "../../resources/vk-brands.svg";
-import { ReactComponent as YouTube } from "../../resources/youtube-square-brands.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const Header = () => {
+const Header = (props) => {
   // <div class="header">
   //     <a class="logo" href="index.html">NepalTravel</a>
   //     <div class="toggle"></div>
@@ -58,19 +55,19 @@ const Header = () => {
   //     </div>
   // </div>
 
-  const [active, setActive] = useState(false);
+  const {overlay, toggleOverlay} = props;
 
   const handleClick = () => {
-    setActive((prev) => !prev);
-  };
+    toggleOverlay();
+  }
 
   return (
     <div className="header">
       <a className="logo" href="index.html">
         NepalTravelBlog
       </a>
-      <button className="mobileButton" onClick={handleClick}>
-        {!active ? (
+      <button className="mobile-button" onClick={handleClick}>
+        {!overlay? (
           <AiOutlineMenu className="svg-menu-icon" />
         ) : (
           <AiOutlineClose className="svg-menu-icon active" />

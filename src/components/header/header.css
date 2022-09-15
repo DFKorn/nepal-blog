@@ -3,7 +3,7 @@ header {
   right: 0;
   left: 0;
   top: 0;
-  height: 64px;
+  height: var(--header-height);
   z-index: 80;
   margin-top: 0;
 }
@@ -30,7 +30,7 @@ nav a {
   margin-left: 10px;
 }
 
-.mobileButton {
+.mobile-button {
   /* display: none; */
   display: flex;
   align-items: center;
