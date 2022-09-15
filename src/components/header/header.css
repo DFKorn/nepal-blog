@@ -1,0 +1,50 @@
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 64px;
+  z-index: 80;
+  margin-top: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: var(--box-shadow);
+  max-width: 1660px;
+  margin: auto;
+  height: 100%;
+  background-color: var(--color-background-secondary);
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+.mobileButton {
+  /* display: none; */
+  display: flex;
+  align-items: center;
+  height: 36px;
+  justify-content: center;
+  outline: none;
+  padding: 0;
+  position: relative;
+  width: 36px;
+}
+
+.svg-menu-icon {
+  display: block;
+  height: 26px;
+  position: relative;
+  width: 26px;
+}
