@@ -14,7 +14,7 @@ const OverlayMenu = () => {
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Aboout us</a></li>
-                    <li><a href="">NepalTravel</a></li>
+                    <li><a href="https://www.reddit.com/r/EarthPorn/search/?q=nepal&restrict_sr=1&sr_nsfw=&sort=new">More</a></li>
                 </ul>
             </nav>
             <footer className="overlay-footer">
@@ -29,8 +29,8 @@ const OverlayMenu = () => {
                         <YouTube className="social-icon" alt="YouTube" />
                     </a>
                 </div>
-                <div >
-                    <a href="" className="overlay-footer-logo">NepalTravel</a>
+                <div className="overlay-footer-logo">
+                    <a href="" className="logo">NepalTravel</a>
                 </div>
             </footer>
         </div>

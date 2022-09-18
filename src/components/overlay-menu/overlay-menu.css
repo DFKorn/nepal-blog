@@ -52,3 +52,8 @@
     width: 22px;
 }
 
+@media( min-width:640px) {
+    .overlay-menu{
+        display: none;
+    }
+}

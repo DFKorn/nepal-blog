@@ -20,12 +20,12 @@ function App() {
       <header>
         <Header toggleOverlay = {toggleOverlay} overlay = {overlay}/>
       </header>
-      <div className="content-wrapper">
-        <main>
+      <div className="content-body">
+        <div className="content-wrapper">
           <Main />
-        </main>
+        </div>
       </div>
-      <OverlayMenu/>
+      {overlay ? <OverlayMenu/> : null}
     </>
   );
 }

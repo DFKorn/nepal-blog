@@ -6,6 +6,8 @@ header {
   height: var(--header-height);
   z-index: 80;
   margin-top: 0;
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-background-secondary);
 }
 
 .header {
@@ -13,26 +15,35 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  box-shadow: var(--box-shadow);
   max-width: 1660px;
   margin: auto;
   height: 100%;
-  background-color: var(--color-background-secondary);
   box-sizing: border-box;
+}
+
+
+.blog-logo{
+  font-size: 18px;
+  font-weight: bold;
 }
 
 nav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 nav a {
   margin-left: 10px;
 }
 
+.header-nav a:last-of-type{
+  margin-left: 20px;
+}
+
+
 .mobile-button {
-  /* display: none; */
-  display: flex;
+  display: none; 
+  /* ; */
   align-items: center;
   height: 36px;
   justify-content: center;
@@ -47,4 +58,14 @@ nav a {
   height: 26px;
   position: relative;
   width: 26px;
+}
+
+@media (max-width: 640px){
+  .header-nav{
+    display: none;
+  }
+
+  .mobile-button{
+    display: flex
+  }
 }
