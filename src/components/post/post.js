@@ -1,16 +1,14 @@
 import React from "react";
 import './post.css'
-// import Skeleton from 'react-loading-skeleton';
 import { FaUserCircle } from "react-icons/fa"
 import moment from 'moment';
-
 
 
 
 const Post = (props) => {
 
     const {post} = props;
-    // console.log(post)
+    
 
     if(!post){
         return (
@@ -33,7 +31,7 @@ const Post = (props) => {
                         </h3>
                         <div className="post-image-container">
                             <a href={`${postURL}${post.permalink}`} className="post-image-link">
-                                <img src={post.url} alt='nepal' className="post-image"></img>
+                                <img src={post.url} alt='' className="post-image"></img>
                             </a>
                         </div>
                         <div className="post-details">

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    z-index: 30;
+    z-index: 90;
     position: fixed;
     top: var(--header-height);
     left: 0;
@@ -13,15 +13,18 @@
     padding-right: 16px;
     padding-top: 16px;
     padding-bottom: 48px;
-    
-    /* font-size: 16px; */
-    overflow-y: scroll;
+    font-size: 16px; 
     background-color: var(--color-background-secondary);
-    box-sizing:border-box;
+}
+
+.overlay-navigation li {
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .overlay-navigation li a{
     margin: 0;
+    font-weight: 600;
 }
 
 .overlay-footer{
@@ -52,7 +55,7 @@
     width: 22px;
 }
 
-@media( min-width:640px) {
+@media( min-width:940px) {
     .overlay-menu{
         display: none;
     }

@@ -4,7 +4,7 @@ header {
   left: 0;
   top: 0;
   height: var(--header-height);
-  z-index: 80;
+  z-index: 100;
   margin-top: 0;
   box-shadow: var(--box-shadow);
   background-color: var(--color-background-secondary);
@@ -18,7 +18,6 @@ header {
   max-width: 1660px;
   margin: auto;
   height: 100%;
-  box-sizing: border-box;
 }
 
 
@@ -60,7 +59,7 @@ nav a {
   width: 26px;
 }
 
-@media (max-width: 640px){
+@media (max-width: 940px){
   .header-nav{
     display: none;
   }

@@ -1,46 +1,62 @@
 import "./main.css";
-import React, { useEffect, useState } from "react";
-import { getSubredditPosts } from "../../api/reddit";
-import Skeleton from 'react-loading-skeleton';
+import React, { useEffect, useMemo, useState } from "react";
+import { getSubredditPosts, subredditsList } from "../../api/reddit";
 import 'react-loading-skeleton/dist/skeleton.css'
 import Post from "../post/post";
 import CommunitiyNavigator from "../community-nav/communityNavigator";
+import PostLoading from "../post/postLoading";
 
-const Main = (props) => {
-  const {changeSubreddit, subreddit} = props;
+
+
+
+const Main = () => {
   const [posts, setPosts] = useState([]);
-
-  
-  
+  const [isPostsLoading, setPostsIsLoading] = useState(false);
+  const [selectedSubredditId, setSelectedSubredditId] = useState('EarthPorn');
+  //variable that stores selected subreddit from subreddeits' list(list is imported from reddit.js in api folder)
+  const selectedSubreddit = useMemo(() => subredditsList.find(subreddit => subreddit.id === selectedSubredditId),[selectedSubredditId]
+  ) 
 
   useEffect(() => {
     alert("Requested data from server...");
     (async () => {
-      const subredditPosts = await getSubredditPosts('worldnews');
+      setPostsIsLoading(true);
+      const subredditPosts = await getSubredditPosts(selectedSubreddit.title);
       setPosts(subredditPosts);
+      setPostsIsLoading(false);
     })();
+    
     console.log("render");
-  }, []);
+  }, [selectedSubreddit]);
 
   console.log(posts)
+  console.log(selectedSubreddit)
+
+  const selectSubreddit = (id) => {
+    setSelectedSubredditId(id)
+  }
+
   
 
-  // const getRandomNumber = (min,max) =>{
-  //   return Math.floor(Math.random() * max) + min
-  // }
-
-  if(!posts){
+  if(isPostsLoading){
     return(
-      <>
-      <Skeleton count={5} height={300} width={'100%'}/>
-      </>
+      <main>
+      <CommunitiyNavigator subreddits={subredditsList} 
+                           selectSubreddit={selectSubreddit} 
+                           selectedSubreddit={selectedSubreddit}
+                           />  
+      <PostLoading />
+      </main>
     )
   }
 
   
   return (
     <main>
-      <CommunitiyNavigator changeSubreddit={changeSubreddit} subreddit={subreddit}/>
+      <CommunitiyNavigator subreddits={subredditsList} 
+                           selectSubreddit={selectSubreddit} 
+                           selectedSubreddit={selectedSubreddit}
+                           />
       {posts.map((post)=>(
         <Post 
           key={post.id}

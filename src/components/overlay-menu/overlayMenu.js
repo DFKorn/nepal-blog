@@ -1,5 +1,5 @@
 import React from "react";
-import './overlay-menu.css'
+import './overlayMenu.css'
 import { ReactComponent as Telegram } from "../../resources/telegram-brands.svg";
 import { ReactComponent as Vk } from "../../resources/vk-brands.svg";
 import { ReactComponent as YouTube } from "../../resources/youtube-square-brands.svg";
@@ -12,9 +12,9 @@ const OverlayMenu = () => {
         <div className="overlay-menu">
             <nav className="overlay-navigation">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Aboout us</a></li>
-                    <li><a href="https://www.reddit.com/r/EarthPorn/search/?q=nepal&restrict_sr=1&sr_nsfw=&sort=new">More</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://dfkorn.github.io/nepal/about/about.html">About us</a></li>
+                    <li><a href="https://www.reddit.com/search/?q=nepal">More</a></li>
                 </ul>
             </nav>
             <footer className="overlay-footer">

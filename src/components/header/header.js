@@ -13,7 +13,7 @@ const Header = (props) => {
 
   return (
     <div className="header">
-      <a className="blog-logo" href="index.html">
+      <a className="blog-logo" href="/">
         NepalTravelBlog
       </a>
       <button className="mobile-button" onClick={handleClick}>

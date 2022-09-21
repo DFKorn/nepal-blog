@@ -3,9 +3,10 @@
     box-shadow: var(--box-shadow);
     margin-bottom: var(--margin-bottom-card);
     border-radius: var(--radius);
-    /* padding: var(--spacing-3);
-    transition: box-shadow 0.1s ease-in;
-    color: var(--color-text-secondary); */
+}
+
+.post-card:hover{
+    box-shadow: var(--box-shadow-hover);
 }
 
 .post-wrapper {
@@ -52,6 +53,7 @@
   margin-right: 2px;
   vertical-align: middle;
   padding-bottom: 2px;
+  box-sizing: content-box;
 }
 
 .author-username{
