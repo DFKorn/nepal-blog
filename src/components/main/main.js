@@ -1,17 +1,22 @@
 import "./main.css";
 import React, { useEffect, useState } from "react";
 import { getSubredditPosts } from "../../api/reddit";
-import Post from "../post/post";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
+import Post from "../post/post";
+import CommunitiyNavigator from "../community-nav/communityNavigator";
 
-const Main = () => {
+const Main = (props) => {
+  const {changeSubreddit, subreddit} = props;
   const [posts, setPosts] = useState([]);
+
+  
+  
 
   useEffect(() => {
     alert("Requested data from server...");
     (async () => {
-      const subredditPosts = await getSubredditPosts();
+      const subredditPosts = await getSubredditPosts('worldnews');
       setPosts(subredditPosts);
     })();
     console.log("render");
@@ -35,6 +40,7 @@ const Main = () => {
   
   return (
     <main>
+      <CommunitiyNavigator changeSubreddit={changeSubreddit} subreddit={subreddit}/>
       {posts.map((post)=>(
         <Post 
           key={post.id}
