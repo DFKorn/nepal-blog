@@ -15,6 +15,33 @@ main{
 
 @media (max-width: 640px){
   .content-wrapper{
-    padding: 20px 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
+}
+
+.more-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.more-link{
+    line-height: 17px;
+    min-height: 35px;
+    min-width: 128px;
+    padding: 4px 16px;
+    background-color: #0068b5;
+    color: #ffffff;
+    border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.more-link:hover{
+  background-color:#0068b5db;
 }

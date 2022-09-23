@@ -12,7 +12,7 @@ const Post = (props) => {
 
     if(!post){
         return (
-            <h2>Rendering...</h2>
+            <h2>Something went wrong...</h2>
         )
     }
 

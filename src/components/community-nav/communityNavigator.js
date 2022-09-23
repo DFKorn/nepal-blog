@@ -1,4 +1,4 @@
-import React, { useEffect,useRef, useState, useLayoutEffect} from "react";
+import React, { useState} from "react";
 import './communityNavigator.css';
 import CommunitiesList from "../communities-list/communitiesList";
 import { FaChevronDown } from "react-icons/fa";
@@ -14,8 +14,6 @@ const CommunitiyNavigator= (props) => {
         setDropVisible((prev) => !prev)
     }
 
-    // test
-      
         
 
     return(
