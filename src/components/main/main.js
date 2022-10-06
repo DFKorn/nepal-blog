@@ -33,6 +33,7 @@ const Main = () => {
 
   useEffect(() => {
     alert("Requested data from server...");
+    let unsubscribed = false;
     (async () => {
       try{
         setPostsIsLoading(true);
@@ -41,7 +42,9 @@ const Main = () => {
           setError(true)
           throw new Error(`The data is empty`);
         }
-        setPosts(subredditPosts);
+        if (!unsubscribed){
+          setPosts(subredditPosts);
+        }
       }
       catch(error){
         console.log(error)
@@ -51,6 +54,11 @@ const Main = () => {
     })();
 
     console.log("render");
+
+    return () => {
+      console.log('cancelled');
+      unsubscribed = true;
+    }
   }, [selectedSubreddit]);
 
 
