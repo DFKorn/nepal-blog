@@ -69,10 +69,12 @@
 
     .post-title{
         padding-left: var(--padding-mobile);
+        padding-right: var(--padding-mobile);
     }
 
     .post-details{
         padding-left: var(--padding-mobile);
+        padding-right: var(--padding-mobile);
     }
   }
   
