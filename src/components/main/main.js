@@ -62,10 +62,6 @@ const Main = () => {
   }, [selectedSubreddit]);
 
 
-
-
-
-
   console.log(posts)
   console.log(selectedSubreddit)
 
@@ -73,7 +69,6 @@ const Main = () => {
     setSelectedSubredditId(id)
   }
 
-  
 
   if(isPostsLoading){
     return(

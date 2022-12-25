@@ -6,8 +6,6 @@ import { ReactComponent as YouTube } from "../../resources/youtube-square-brands
 
 const OverlayMenu = () => {
 
-
-
     return(
         <div className="overlay-menu">
             <nav className="overlay-navigation">
