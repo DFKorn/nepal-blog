@@ -14,7 +14,7 @@ export const getSubredditPosts = async (subreddit = 'EarthPorn') => {
     catch(error){
       console.log(error)
     }
-  }
+  };
 
 
   export const subredditsList = [{
@@ -57,4 +57,4 @@ export const getSubredditPosts = async (subreddit = 'EarthPorn') => {
     iconURL:'https://styles.redditmedia.com/t5_2qh41/styles/communityIcon_x4pa3xf5z4d11.jpg?width=256&s=b235da794133a51b9f6ce9fe93eb789553a29d46',
     softName:'Travel'
   },
-  ] 
+  ]; 

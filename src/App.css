@@ -4,15 +4,7 @@
   --color-border: #e6e6e6;
   --color-text-header: #1a1a1b;
   --color-text-body: #1c1c1c;
-  /* --color-text-secondary: #717171;
-  --color-text-invert: #ffffff;
-  --color-text-link: #4ec3f5;
-  --color-branding: #3d5af1;
-  --color-branding-transparent: #3d5af140;
-
-  --color-alert: #ff304f;
-  --color-success: #45b81f;
-  --color-on-hover: #0000000f; */
+  
 
   --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;

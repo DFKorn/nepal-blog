@@ -6,10 +6,8 @@ import moment from 'moment';
 
 
 const Post = (props) => {
-
     const {post} = props;
     
-
     if(!post){
         return (
             <h2>Something went wrong...</h2>

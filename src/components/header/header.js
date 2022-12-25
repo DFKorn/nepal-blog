@@ -1,10 +1,9 @@
 import React from "react";
 import "./header.css";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
-  
-
   const {overlay, toggleOverlay} = props;
 
   const handleClick = () => {
@@ -13,9 +12,9 @@ const Header = (props) => {
 
   return (
     <div className="header">
-      <a className="blog-logo" href="/">
+      <Link className="blog-logo" to="/" reloadDocument>
         NepalTravelBlog
-      </a>
+      </Link>
       <button className="mobile-button" onClick={handleClick}>
         {!overlay? (
           <AiOutlineMenu className="svg-menu-icon" />

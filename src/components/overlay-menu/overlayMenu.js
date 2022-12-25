@@ -28,7 +28,7 @@ const OverlayMenu = () => {
                     </a>
                 </div>
                 <div className="overlay-footer-logo">
-                    <a href="" className="logo">NepalTravel</a>
+                    <a href="https://dfkorn.github.io/nepal" className="logo">NepalTravel</a>
                 </div>
             </footer>
         </div>
