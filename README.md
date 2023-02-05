@@ -7,4 +7,4 @@
 * Responsive design
 * Reddit API
 
-### Live - [NepalTravelBlog](https://nepal-blog.netlify.app/)
+### Live - [NepalTravelBlog](https://dfkorn.github.io/nepal)
