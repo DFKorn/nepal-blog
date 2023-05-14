@@ -72,6 +72,11 @@
         padding-right: var(--padding-mobile);
     }
 
+    .post-image{
+      width: 100%;
+      object-fit: cover;
+    }
+
     .post-details{
         padding-left: var(--padding-mobile);
         padding-right: var(--padding-mobile);

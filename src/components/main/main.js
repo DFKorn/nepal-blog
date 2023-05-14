@@ -103,10 +103,11 @@ const Main = () => {
                            selectSubreddit={selectSubreddit} 
                            selectedSubreddit={selectedSubreddit}
                            />
-      {posts.map((post)=>(
+      {posts.map((post, index)=>(
         <Post 
           key={post.id}
           post = {post}
+          index = {index}
         />
       ))}
       <div className="more-wrapper">
