@@ -6,7 +6,7 @@ import moment from 'moment';
 
 
 const Post = (props) => {
-    const {post} = props;
+    const {post, index} = props;
     
     if(!post){
         return (
@@ -16,6 +16,8 @@ const Post = (props) => {
 
     const postURL = 'https://www.reddit.com'
     const userURL = 'https://www.reddit.com/user/'
+    const imgUrl = post?.preview?.images[0].resolutions
+    const urlTransform = url => url.replaceAll('amp;','')
 
     return (
         <article key={post.id}>
@@ -29,7 +31,17 @@ const Post = (props) => {
                         </h3>
                         <div className="post-image-container">
                             <a href={`${postURL}${post.permalink}`} className="post-image-link">
-                                <img src={post.url} alt='' className="post-image"></img>
+                                <img
+                                    src={post.url}
+                                    alt='' 
+                                    loading = {index > 3 ? 'lazy' : 'eager'} 
+                                    className="post-image"
+                                    srcSet={!imgUrl ? post.url
+                                                    : imgUrl.length < 5 ? urlTransform(imgUrl[imgUrl.length-1].url)
+                                                                        : `${urlTransform(imgUrl[3].url)} 640w, ${urlTransform(imgUrl[4].url)} 960w`
+                                    }
+                                    sizes="(max-width: 640px) 200px, 960px"
+                                />  
                             </a>
                         </div>
                         <div className="post-details">
