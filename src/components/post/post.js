@@ -40,7 +40,7 @@ const Post = (props) => {
                                                     : imgUrl.length < 5 ? urlTransform(imgUrl[imgUrl.length-1].url)
                                                                         : `${urlTransform(imgUrl[3].url)} 640w, ${urlTransform(imgUrl[4].url)} 960w`
                                     }
-                                    sizes="(max-width: 640px) 200px, 960px"
+                                    sizes="(max-width: 640px) 200px, 1100px"
                                 />  
                             </a>
                         </div>
