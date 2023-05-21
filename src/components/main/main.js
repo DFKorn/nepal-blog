@@ -13,29 +13,18 @@ const Main = () => {
   const [posts, setPosts] = useState([]);
   const [isPostsLoading, setPostsIsLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [selectedSubredditId, setSelectedSubredditId] = useState('EarthPorn');
+  const subredditTitle = sessionStorage.getItem('subredditTitle') ? sessionStorage.getItem('subredditTitle') : 'EarthPorn'
+  const [selectedSubredditId, setSelectedSubredditId] = useState(subredditTitle);
   //variable that stores selected subreddit from subreddeits' list(list is imported from reddit.js in api folder)
   const selectedSubreddit = useMemo(() => subredditsList.find(subreddit => subreddit.id === selectedSubredditId),[selectedSubredditId]
   ) 
 
-  // useEffect(() => {
-  //   alert("Requested data from server...");
-  //   (async () => {
-  //     setPostsIsLoading(true);
-  //     const subredditPosts = await getSubredditPosts(selectedSubreddit.title);
-  //     setPosts(subredditPosts);
-  //     setPostsIsLoading(false);
-  //   })();
-    
-  //   console.log("render");
-  // }, [selectedSubreddit]);
-
-
+ 
   useEffect(() => {
     alert("Requested data from server...");
     let unsubscribed = false;
     (async () => {
-      try{
+    try{
         setPostsIsLoading(true);
         const subredditPosts = await getSubredditPosts(selectedSubreddit.title);
         if (!subredditPosts) {
@@ -44,6 +33,7 @@ const Main = () => {
         }
         if (!unsubscribed){
           setPosts(subredditPosts);
+          sessionStorage.setItem('subredditTitle', selectedSubreddit.title)
         }
       }
       catch(error){
