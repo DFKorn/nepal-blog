@@ -8,7 +8,6 @@ import PostLoading from "../post/postLoading";
 
 
 
-
 const Main = () => {
   const [posts, setPosts] = useState([]);
   const [isPostsLoading, setPostsIsLoading] = useState(false);
@@ -21,7 +20,7 @@ const Main = () => {
 
  
   useEffect(() => {
-    alert("Requested data from server...");
+    // alert("Requested data from server...");
     let unsubscribed = false;
     (async () => {
     try{
@@ -43,17 +42,10 @@ const Main = () => {
       setPostsIsLoading(false);
     })();
 
-    console.log("render");
-
     return () => {
-      console.log('cancelled');
       unsubscribed = true;
     }
   }, [selectedSubreddit]);
-
-
-  console.log(posts)
-  console.log(selectedSubreddit)
 
   const selectSubreddit = (id) => {
     setSelectedSubredditId(id)
