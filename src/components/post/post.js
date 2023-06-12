@@ -29,9 +29,11 @@ const Post = (props) => {
                                 {post.title}
                             </a>
                         </h3>
-                        <div className="post-image-container">
+                        <div className="post-image-container" >
                             <a href={`${postURL}${post.permalink}`} className="post-image-link">
                                 <img
+                                    style={{backgroundImage: !imgUrl ? '#fff' : `url(${urlTransform(imgUrl[0].url)})`,
+                                    backgroundSize:'cover'}}
                                     src={post.url}
                                     alt='' 
                                     loading = {index > 3 ? 'lazy' : 'eager'} 

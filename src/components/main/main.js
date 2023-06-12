@@ -25,19 +25,20 @@ const Main = () => {
     (async () => {
     try{
         setPostsIsLoading(true);
+        setError(false);
         const subredditPosts = await getSubredditPosts(selectedSubreddit.title);
         if (!subredditPosts) {
-          setError(true)
           throw new Error(`The data is empty`);
         }
         if (!unsubscribed){
+          console.log(subredditPosts)
           setPosts(subredditPosts);
           sessionStorage.setItem('subredditTitle', selectedSubreddit.title)
         }
       }
       catch(error){
-        console.log(error)
-        setError(true)
+        console.log(error);
+        setError(true);
       }
       setPostsIsLoading(false);
     })();
