@@ -31,7 +31,6 @@ const Main = () => {
           throw new Error(`The data is empty`);
         }
         if (!unsubscribed){
-          console.log(subredditPosts)
           setPosts(subredditPosts);
           sessionStorage.setItem('subredditTitle', selectedSubreddit.title)
         }
