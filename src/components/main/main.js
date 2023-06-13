@@ -73,7 +73,7 @@ const Main = () => {
                            />  
       <div style={{textAlign:'center'}}>
         <h3>404: Whoops</h3>
-        <p>Sorry, something went wrong with our blog. Check back later!</p>
+        <p>Sorry, something went wrong with our blog. Try to select another community or check back later!</p>
       </div>
       </main>
     )
