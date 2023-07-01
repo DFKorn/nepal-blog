@@ -14,8 +14,7 @@ const CommunitiyNavigator= (props) => {
         setDropVisible((prev) => !prev)
     }
 
-        
-
+   
     return(
         <div className="communities-nav">
            <div className="communities-card">
