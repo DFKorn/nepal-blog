@@ -6,8 +6,6 @@ import './communitiesList.css';
 const CommunitiesList = (props) => {
     const {subreddits, selectSubreddit, changeVisibility} = props;
 
-  
-
     return(
         <ul className="communities-list">
             {subreddits.map(subreddit => (

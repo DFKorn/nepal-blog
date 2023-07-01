@@ -22,7 +22,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>}/>
           </Routes>
-          {/* <Main /> */}
         </div>
       </div>
       {overlay ? <OverlayMenu/> : null}
